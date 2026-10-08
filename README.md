@@ -86,12 +86,10 @@ For the complete methodology, theory, equations, and experiment walkthrough, see
 
 Strong scaling keeps the **global batch size fixed** while increasing GPU count.
 
-For \(N\) GPUs:
+For **N GPUs**:
 
 $$
-B_{\text{local}}
-=
-\frac{B_{\text{global}}}{N}
+B_{local} = \frac{B_{global}}{N}
 $$
 
 As GPU count increases, each GPU performs less local computation.
@@ -314,9 +312,7 @@ The intended difference is synchronization frequency.
 
 Result:
 
-$$
-\boxed{+9.67\% \text{ throughput}}
-$$
+**+9.67% throughput**
 
 with essentially unchanged short-run validation behavior.
 
@@ -337,21 +333,15 @@ For four optimizer updates:
 
 Therefore:
 
-$$
-48 \rightarrow 12
-$$
+**48 → 12**
 
 corresponds to a:
 
-$$
-\boxed{75\% \text{ reduction in synchronization frequency}}
-$$
+**75% reduction in synchronization frequency**
 
 and approximately:
 
-$$
-\boxed{35.7\% \text{ lower NCCL kernel residency}}
-$$
+**35.7% lower NCCL kernel residency**
 
 The full causal chain is therefore:
 
